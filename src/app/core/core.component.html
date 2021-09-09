@@ -1,0 +1,13 @@
+<mat-drawer-container class="core-container" autosize>
+    <mat-drawer #drawer class="core-sidenav" mode="side" opened>
+        <app-sidebar [sideNavOptions]="sideNavOptions"></app-sidebar>
+    </mat-drawer>
+
+    <div class="core-sidenav-content">
+        <div class="core-header">
+            <app-header (openSidnav)="toggleDrawer()"></app-header>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-drawer-container>

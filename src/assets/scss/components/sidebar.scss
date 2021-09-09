@@ -1,0 +1,45 @@
+
+.sidenav-content {
+    .logo {
+      padding: em(26) em(20);
+      background-color: #3C3B54;
+    }
+    .options {
+      .option {
+        cursor: pointer;
+        margin: em(6) 0;
+        border-left:solid #43425D em(5);
+        font-family: 'Source Sans Pro';
+        .detail {
+          color: white;
+          flex-grow: 1;
+          img {
+            padding: em(20) em(15);
+          }
+        }
+        .label {
+          .inbox-label {
+            color: white;
+            font-size: rem(10);
+            background-color: #FF4A33;
+            margin-right: em(20);
+            border-radius: em(66);
+            font-family: 'Source Sans Pro';            
+            .value {
+              margin: 0;
+              padding: em(0) em(10);
+            }
+          }
+        }
+        &:hover {
+          background-color: #3C3B54;
+          border-left: solid #3C3B54 em(5);
+        }
+      }
+    }
+  }
+
+  .selected-option {
+    background-color: #3C3B54;
+    border-left: solid #A3A0FB em(5) !important;
+  }

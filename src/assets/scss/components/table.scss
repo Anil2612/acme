@@ -1,0 +1,51 @@
+.referer {
+    margin-top: em(20);
+    padding: em(18) em(24);
+    h2 {
+        margin: 0 !important;
+        color: #4D4F5C;
+        font-size: rem(18);
+    }
+    .refer-table {
+        table {
+            width: 100%;
+            text-align: left;
+            border: none !important;
+            tr {
+                th {
+                    width: fit-content !important;
+                    padding: em(15) em(20) em(17);
+                    padding-right: em(50);
+                    color: #A3A6B4;
+                    border: none;
+                    font-weight: 600;
+                    font-family: 'Source Sans Pro';
+                    font-size: rem(14);
+                }
+                td{
+                    padding-left: em(20);
+                    padding: em(16) em(20);
+                    border-bottom: solid #F0F4F7 1px;
+                    font-size: rem(14);
+                    color: #4D4F5C;
+                }
+                &:first-child {
+                    background-color: #F5F6FA;
+                }
+            }
+        }
+        padding-top: rem(19);
+    }
+    .show {
+        margin-top: rem(21);
+        margin-bottom: em(14);
+        margin-left: em(25);
+        font-size: rem(14);
+        color: #3B86FF;
+        cursor: pointer;
+        width: fit-content;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

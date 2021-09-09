@@ -1,0 +1,79 @@
+@media only screen and (max-width: 1000px) {
+
+    .content-wrapper {
+      padding: em(20) !important;
+    }
+
+    .overview-content {
+        flex-direction: column-reverse;
+    }
+
+    .m-block {
+        display: block !important;
+        width: 100%;
+    }
+
+    .m-no-display {
+        display: none !important;
+    }
+
+    .m-header {
+        border-radius: 0px !important;
+    }
+
+    .graph {
+        margin-right: 0 !important;
+    }
+
+    .profile {
+        padding: 0 !important;
+    }
+
+    .r-overview-content {
+        margin: 0 !important;
+    }
+
+    .user {
+        width: unset !important;
+        padding: 0 1em;
+    }
+
+    .notification-menu {
+        right: -60px !important;
+        .user-lists {
+            padding:em(15) !important;
+        }
+    }
+
+    .mat-drawer {
+        width: 80% !important;
+    }
+
+    dx-chart {
+      overflow-x: scroll !important;
+      max-width: 90vw !important;
+    }
+
+    dx-pie-chart {
+      max-width: 90vw !important;
+      overflow-x: scroll !important;
+    }
+
+    .refer-table {
+      overflow-x: scroll !important;
+    }
+
+    .m-line-chart {
+      margin-top: em(20);
+    }
+
+    .m-d-display {
+      display: block;
+    }
+
+    .m-f-display {
+      display: flex !important;
+    }
+
+}
+

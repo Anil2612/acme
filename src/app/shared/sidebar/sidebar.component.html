@@ -1,0 +1,20 @@
+<div class="sidenav-content">
+    <div class="logo">
+        <img src="../../assets/icons/logo.svg" alt="">
+    </div>
+    <div class="options">
+        <ng-container *ngFor="let option of sideNavOptions; let i = index">
+            <div class="option flex-box" (click)="clickOption(i)" [ngClass]="{'selected-option': option.selected}">
+                <div class="detail flex-box">
+                    <img src='{{ "../../assets/icons/" + option.icon + ".svg"}}' alt="">
+                    <div class="name">{{option.label}}</div>
+                </div>
+                <div class="label">
+                    <div *ngIf="option.label === 'Inbox'" class="inbox-label">
+                        <div class="value">New</div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

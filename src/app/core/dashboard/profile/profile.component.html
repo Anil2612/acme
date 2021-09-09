@@ -1,0 +1,35 @@
+<div class="profile card">
+    <div class="profile-header grid-box">
+        <div class="dp-container">
+            <img class="edit" src="../../../assets/icons/edit.svg" alt="">
+            <img src="../../../assets/images/profile/profile.png" alt="">
+        </div>
+        <h3>Nick Herasimenka</h3>
+        <h4>United States</h4>
+        <div class="social flex-box">
+            <object class="icon" type="image/svg+xml" data="../../../assets/icons/twitter.svg"></object>
+            <object class="icon" type="image/svg+xml" data="../../../assets/icons/facebook.svg"></object>
+            <object class="icon" type="image/svg+xml" data="../../../assets/icons/linkedin.svg"></object>
+            <object class="icon" type="image/svg+xml" data="../../../assets/icons/whatsapp.svg"></object>
+        </div>
+    </div>
+    <hr>
+    <div class="user">
+        <div class="user-heading flex-box">
+            <div class="heading">Our Users</div>
+            <img src="../../../assets/icons/options.svg" alt="">
+        </div>
+        <ng-container *ngFor="let user of users">
+            <div class="user-detail flex-box">
+                <img class="dp" src='{{ "../../../assets/images/" + user.icon + ".jpg"}}' alt="">
+                <div class="user-detail-list">
+                    <div class="name">{{user.name}}</div>
+                    <div class="user-details flex-box">
+                        <div class="country">{{user.country}}</div>
+                        <div class="mobile">{{user.mobile}}</div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
