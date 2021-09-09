@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="content-container">
+        <div class="content-wrapper">
+            <div class="overview flex-box">
+                <h1>Overview</h1>
+                <div class="add-fund flex-box">
+                    <div class="label">Add Funds</div>
+                    <img src="../../../assets/icons/plus.svg" alt="">
+                </div>
+            </div>
+            <div class="overview-content m-block">
+                <div class="r-overview-content">
+                    <app-profile [users]="users"></app-profile>
+                    <app-product-content [isSmall]="true"></app-product-content>
+                </div>
+                <div class="l-overview-content">
+                    <div class="graphs flex-box m-block">
+                        <div class="graph card m-line-chart">
+                            <div class="heading-label flex-box">
+                                <div class="heading">Statistics</div>
+                                <div class="month-option flex-box">
+                                    <div class="label">Last 6 months</div>
+                                    <img src="../../../assets/icons/small-down.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="grid-box">
+                                <app-diagrams [graphType]="0"></app-diagrams>
+                            </div>
+                        </div>
+                        <div class="graph card">
+                            <div class="heading-label flex-box">
+                                <div class="heading">Sales Distribution</div>
+                            </div>
+                            <div class="grid-box">
+                                <app-diagrams [graphType]="1"></app-diagrams>
+                            </div>
+                        </div>
+                    </div>
+                    <app-dashboard-table [displayedColumns]="displayedColumns" [dataSource]="dataSource"></app-dashboard-table>
+                </div>
+            </div>
+            <app-product-content [isSmall]="false"></app-product-content>
+        </div>
+    </div>
+</div>

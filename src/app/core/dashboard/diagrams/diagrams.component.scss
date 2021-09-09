@@ -1,0 +1,38 @@
+dx-pie-chart {
+    ::ng-deep {
+        .dxc {
+            .dxc-title {
+                display: none !important;
+            }
+            .dxc-labels-group {
+                display: none !important;
+            }
+            .dxc-legend {
+                transform: translateY(5px);
+            }
+        }
+    }
+
+}
+
+dx-chart {
+    ::ng-deep {
+        .dxc {
+            .dxc-title {
+                display: none !important;
+            }
+            .dx-export-menu {
+                display: none !important;
+            }
+            .dxc-legend {
+                transform: translateY(5px);
+            }
+        }
+    }
+
+}
+
+.text-graph {
+    color: #4D4F5C;
+    font-size: rem(10) !important; 
+}

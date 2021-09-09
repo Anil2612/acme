@@ -1,0 +1,81 @@
+.container {
+    .content-container {
+        background-color: #F5F7FB;
+        .content-wrapper {
+            padding: em(30) em(40);
+            .overview {
+                margin-bottom: em(30);
+                h1 {
+                    color: #43425D;
+                    font-size: rem(28);
+                    font-weight: 600;
+                    flex-grow: 1;
+                }
+                .add-fund {
+                    color: white;
+                    background-color: #6763E3;
+                    padding: em(13) em(15);
+                    border-radius: em(6);
+                    cursor: pointer;
+                    opacity: 0.9;
+                    transition-duration: 0.3s;
+                    .label {
+                        flex-grow: 1;
+                        font-size: rem(16);
+                        min-width: em(75);
+                    }
+                    img {
+                        padding: em(5);
+                        background-color: #514DDC;
+                        border-radius: 50%;
+                        margin-left: em(16);
+                    }
+                    &:hover {
+                        opacity: 1;
+                        background-color: #6763E3;
+                    }
+                }
+            }
+            .overview-content {
+                display: flex;
+                flex-direction: row-reverse;
+                .l-overview-content {
+                    flex: 1;
+                    .graphs {
+                        justify-content: space-around;
+                        .graph {
+                            margin-bottom: rem(20);
+                            padding: em(18) em(27);
+                            &:first-child {
+                                margin-right: rem(40);
+                            }
+                            .heading-label {
+                                .heading {
+                                    color: #4D4F5C;
+                                    flex-grow: 1;
+                                    font-size: rem(18);
+                                    // margin-bottom: em(20);
+                                }
+                                .month-option {
+                                    cursor: pointer;
+                                    .label {
+                                        font-size: rem(14);
+                                    }
+                                    img {
+                                        margin-left: em(10);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+                .r-overview-content {
+                    flex: 1;
+                    margin-left: em(40);
+                }
+            }
+        }
+    }
+}
+

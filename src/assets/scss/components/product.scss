@@ -1,0 +1,50 @@
+  .product {
+    padding: em(18) em(25);
+    margin-top: em(40);
+    // height: 100%;
+    .heading-label {
+        margin-bottom: em(30);
+        .heading {
+            flex-grow: 1;
+            color: #4D4F5C;
+            font-size: rem(18);
+        }
+        img {
+            cursor: pointer;
+        }
+    }
+    .video {
+        position: relative;
+        cursor: pointer;
+        .play {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            padding: em(10);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 0px 0px 0px 5px rgb(255,255,255,0.5);
+            transition-duration: 0.3s;
+            z-index: 1;
+        }
+        .thumbnail {
+            transition-duration: 0.3s;
+        }
+        img {
+            width: 100%;
+            max-height: em(250);
+        }
+        &:hover {
+            .play {
+                box-shadow: 0px 0px 0px 7px rgb(255,255,255,0.5);
+            }
+            .thumbnail {
+                filter: brightness(0.9);
+            }
+        }
+
+    }
+}

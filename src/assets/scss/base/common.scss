@@ -1,0 +1,38 @@
+html, body {     
+    margin: 0; 
+    padding: 0;
+    height: 100%; 
+    font-family: 'Source Sans Pro', sans-serif;
+    zoom: 0.93;
+}
+
+
+.flex-box {
+    display: flex;
+    align-items: center;
+}
+
+.grid-box {
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: em(10);
+}
+
+hr {
+    border-left: none;
+    margin: 0;
+    border-top: 0.5px solid #F0F4F7;
+}
+
+.link {
+    text-decoration: none;
+    color: blue;
+}
+
+.m-d-display {
+    display: none;
+}

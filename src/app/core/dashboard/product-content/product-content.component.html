@@ -1,0 +1,26 @@
+<ng-container *ngIf="isSmall">
+    <div class="product card m-no-display">
+        <div class="heading-label flex-box">
+            <div class="heading">Product Video</div>
+            <img src="../../../assets/icons/options.svg" alt="">
+        </div>
+        <div class="video" (click)="openVideo()">
+            <img class="play" src="../../../assets/icons/play-icon.svg" alt="">
+            <img class="thumbnail" src="../../../assets/images/thumbnail/thumbnail.png" alt="">
+        </div>
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="!isSmall">
+    <div class="product card m-d-display">
+        <div class="heading-label flex-box">
+            <div class="heading">Product Video</div>
+            <img src="../../../assets/icons/options.svg" alt="">
+        </div>
+        <div class="video" (click)="openVideo()">
+            <img class="play" src="../../../assets/icons/play-icon.svg" alt="">
+            <img class="thumbnail" src="../../../assets/images/thumbnail/thumbnail.png" alt="">
+        </div>
+    </div>
+</ng-container>

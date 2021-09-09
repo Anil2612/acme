@@ -1,0 +1,76 @@
+<div class="header-container">
+    <div class="header flex-box m-header" [ngClass]="{'add-border-radius': showNav}">
+        <div class="l-header-container flex-box">
+            <img class="menu-icon" (click)="openSidebar()" src="../../../assets/icons/menu.svg" alt="Menu">
+            <div class="search flex-box m-no-display">
+                <img (click)="openSearch(true)" src="../../../assets/icons/icon_search.svg" alt="Menu">
+                <input #search type="text" placeholder="Search transactions, invoices or help">
+            </div>
+        </div>
+        <div class="r-header-container flex-box">
+            <div class="search flex-box m-f-display flex-box m-search-container">
+                <input #search  *ngIf="showSearch" class="m-search" type="text" placeholder="Search transactions, invoices or help" autofocus>
+                <img (click)="openSearch(false)" src="../../../assets/icons/icon_search.svg" alt="Menu">
+            </div>
+            <div class="notification">
+                <div class="indication" *ngIf="!showNotification"></div>
+                <img class="n-img" (click)="openNotification()" src="../../../assets/icons/notification.svg" alt="Notification">
+                <div class="notification-menu" *ngIf="showNotification">
+                    <ng-container *ngFor="let notification of notifications">
+                        <div class="user-lists">
+                            <div class="user-list flex-box">
+                                <img class="dp" src='{{ "../../../assets/images/" + notification.icon + ".jpg"}}' alt="">
+                                <div class="user-list-detail">
+                                    <div class="user-name">{{notification.name}}</div>
+                                    <div class="n-detail detail" [innerHtml]="notification.detail"></div>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                {{notification.time}}
+                            </div>
+                        </div>
+                    </ng-container>
+                    <hr>
+                    <div class="show grid-box">
+                       <span>Show More</span> 
+                    </div>
+                </div>
+    
+            </div>
+            <div class="user-detail flex-box" (click)="openProfile()">
+                <div class="name m-no-display">John Doe</div>
+                <img *ngIf="!showProfile" class="down-arrow m-no-display" src="../../../assets/icons/small-down.svg" alt="down-arrow">
+                <img *ngIf="showProfile" class="down-arrow down-arrow-rev m-no-display" src="../../../assets/icons/small-down.svg" alt="down-arrow">
+                <img class="profile-pic" src="../../../assets/images/profile/profile.png" alt="">
+                <div class="profile-menu" *ngIf="showProfile">
+                    <div class="user-lists" (click)="$event.stopPropagation()">
+                        <div class="user-list flex-box">
+                            <img class="dp" src="../../../assets/icons/icon-my-profile.svg" alt="">
+                            <div class="user-list-detail">
+                                <div class="user-name">My Profile</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-lists" (click)="$event.stopPropagation()">
+                        <div class="user-list flex-box">
+                            <img class="dp" src="../../../assets/icons/icon-billing.svg" alt="">
+                            <div class="user-list-detail">
+                                <div class="user-name">Billing</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-lists" (click)="$event.stopPropagation()">
+                        <div class="user-list flex-box">
+                            <img class="dp" src="../../../assets/icons/icon-logout.svg" alt="">
+                            <div class="user-list-detail">
+                                <div class="user-name">Logout</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
