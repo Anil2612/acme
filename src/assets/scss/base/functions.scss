@@ -7,6 +7,9 @@
     @return math.div($size,16) + rem;
 }
 
+
+// Function for converting a px based font-size to em.
+
 @function em($size) {
     @return math.div($size,16) + em;
 }

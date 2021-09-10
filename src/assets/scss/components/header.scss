@@ -1,6 +1,7 @@
 .header-container {
     background-color: #3C3B54;
 }
+
 .header {
     padding: em(23) em(20);
     box-shadow: 0px 2px 6px #0000000A;
@@ -56,17 +57,17 @@
             position: relative;
             border-radius: 50%;
             transition-duration: 0.4s;
-            padding: 0.3em 0.4em;
-            width: em(24);
+            padding: 0 0.4em;
+            // width: em(24);
             height: em(24);
             margin: 0 em(20);
             .indication {
                 position: absolute;
                 background-color: #81E37A;
                 border-radius: 50%;
-                padding: em(3);
-                top: 5px;
-                left: 18px;
+                padding: 0.2em;
+                top: 3px;
+                left: 19px;
             }
             .n-img {
                 cursor: pointer;
@@ -94,8 +95,8 @@
                 transform: rotate(180deg);
             }
             .profile-pic {
-                width: 30px;
-                height: 30px;
+                width: em(40);
+                height: em(40);
                 padding: em(4);
             }
             &:hover {
@@ -112,11 +113,12 @@
     box-shadow: 0px 0px 8px #5565751A;
     border-radius: em(5);
     z-index: 1;
-    top: em(60);
+    top: em(55);
     right: em(-70);
+    animation: fadeIn 0.2s forwards;   
     .user-lists {
         display: flex;
-        min-width: em(360);
+        min-width: 30vw;
         padding: em(15) em(25);
         cursor: pointer;
         margin: em(10) 0;
@@ -128,11 +130,13 @@
                 border-radius: 50%;
             }
             .user-list-detail {
+                width: 100%;
                 margin-left: em(20);
                 font-family: 'Source Sans Pro';
                 .user-name {
                     color: #4D4F5C;
                     font-size: rem(16);
+                    flex-grow: 1;
                 }
                 .n-detail {
                     margin-top: em(6);
@@ -181,14 +185,15 @@
     top: em(62);
     right: em(0);
     color: #43425D;
-    font-family: 'Source Sans Pro';    
+    font-family: 'Source Sans Pro'; 
+    animation: fadeIn 0.2s forwards;   
     .user-lists {
         display: flex;
-        min-width: em(200);
         padding: em(15) em(25);
         cursor: pointer;
         margin: em(10) 0;
         font-size: rem(16);
+        min-width: em(200);
         .user-list {
             flex-grow: 1;
             .user-list-detail {
@@ -225,7 +230,3 @@
 .add-border-radius {
     border-radius: 25px 0px 0px 0px;
 }
-
-.m-f-display {
-    display: none;
-  }

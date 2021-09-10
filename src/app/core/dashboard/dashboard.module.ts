@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
-import { DiagramsComponent } from './diagrams/diagrams.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { DxChartModule, DxPieChartModule } from 'devextreme-angular';
@@ -16,7 +15,6 @@ import { ProductContentComponent } from './product-content/product-content.compo
     ProfileComponent,
     DashboardTableComponent,
     ProductContentComponent,
-    // DiagramsComponent
   ],
   imports: [
     CommonModule,

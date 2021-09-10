@@ -1,14 +1,13 @@
 dx-pie-chart {
     ::ng-deep {
         .dxc {
+            width: inherit !important;
+            height: inherit !important;
             .dxc-title {
                 display: none !important;
             }
             .dxc-labels-group {
                 display: none !important;
-            }
-            .dxc-legend {
-                transform: translateY(5px);
             }
         }
     }
@@ -18,14 +17,13 @@ dx-pie-chart {
 dx-chart {
     ::ng-deep {
         .dxc {
+            width: inherit !important;
+            height: inherit !important;
             .dxc-title {
                 display: none !important;
             }
             .dx-export-menu {
                 display: none !important;
-            }
-            .dxc-legend {
-                transform: translateY(5px);
             }
         }
     }
