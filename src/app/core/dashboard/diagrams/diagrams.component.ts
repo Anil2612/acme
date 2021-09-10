@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild, ChangeDetectorRef } from '@angular/core';
+import { DxPieChartComponent } from 'devextreme-angular';
 @Component({
   selector: 'app-diagrams',
   templateUrl: './diagrams.component.html',
@@ -7,6 +8,7 @@ import { Component, Input } from '@angular/core';
 
 export class DiagramsComponent {
   @Input() graphType = 0;
+  @ViewChild(DxPieChartComponent, { static: false }) pieChart!: DxPieChartComponent;
 
   pie = {
     widthVlaue: 350,
@@ -86,7 +88,34 @@ export class DiagramsComponent {
     nuclear: 37.8
   }];
 
-  constructor() { }
+  constructor(public cdf: ChangeDetectorRef) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    window.onresize = ((e) => {
+      this.renderPieChart()
+    })
+  }
+  renderPieChart() {
+    this.pieChart.instance.render();
+    if (window.innerWidth < 1200) {
+      this.pie = {
+        widthVlaue: 250,
+        heightValue: 300
+      };
+      this.line = {
+        widthVlaue: 150,
+        heightValue: 150
+      };
+    } else {
+      this.pie = {
+        widthVlaue: 350,
+        heightValue: 350
+      };
+      this.line = {
+        widthVlaue: 350,
+        heightValue: 350
+      };
+    }
+    this.cdf.detectChanges();
+  }
 }
