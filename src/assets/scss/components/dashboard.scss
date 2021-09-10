@@ -18,7 +18,7 @@
                     padding: em(13) em(15);
                     border-radius: em(6);
                     cursor: pointer;
-                    filter: brightness(1);
+                    opacity: 0.95;
                     .label {
                         flex-grow: 1;
                         font-size: rem(16);
@@ -31,11 +31,7 @@
                         margin-left: em(16);
                     }
                     &:hover {
-                        .label {
-                            color: white;
-                            filter: brightness(1) !important;
-                        }
-                        filter: brightness(0.95);
+                        opacity: 1;
                         background-color: #6763E3;
                     }
                 }
@@ -75,7 +71,7 @@
                                 position: absolute;
                                 left: 0;
                                 right: 0;
-                                top: em(60);
+                                top: em(50);
                                 margin-left: auto;
                                 margin-right: auto;
                             }
