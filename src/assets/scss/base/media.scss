@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 640px) {
 
     .content-wrapper {
       padding: em(20) !important;
@@ -6,6 +6,7 @@
 
     .overview-content {
         flex-direction: column-reverse;
+        margin:  0 !important;
     }
 
     .m-block {
@@ -21,8 +22,16 @@
         border-radius: 0px !important;
     }
 
+    .graphs {
+      margin: 0 !important;
+    }
+
     .graph {
+      min-width: em(300);
         margin-right: 0 !important;
+        .diag {
+          position:  static !important;
+        }
     }
 
     .profile {
@@ -31,6 +40,17 @@
 
     .r-overview-content {
         margin: 0 !important;
+        padding: 0 !important;
+        min-width: em(300)
+    }
+
+    .l-overview-content {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    app-dashboard-table {
+      margin: 0 !important;
     }
 
     .user {
@@ -39,7 +59,9 @@
     }
 
     .notification-menu {
-        right: -60px !important;
+        width: 95vw !important;
+        transform: translate(20%, 0%) !important;
+        right: 0 !important;
         .user-lists {
             padding:em(15) !important;
         }
@@ -51,16 +73,21 @@
 
     dx-chart {
       overflow-x: scroll !important;
-      max-width: 90vw !important;
+      max-width: em(250) !important;
     }
 
     dx-pie-chart {
-      max-width: 90vw !important;
+      max-width: em(250) !important;
       overflow-x: scroll !important;
     }
 
     .refer-table {
       overflow-x: scroll !important;
+    }
+
+    .referer {
+      margin: 0 !important;
+      min-width: em(300)
     }
 
     .m-line-chart {
@@ -73,6 +100,11 @@
 
     .m-f-display {
       display: flex !important;
+    }
+    
+    .product {
+      margin-top: em(20) !important;
+      min-width: em(300)
     }
 
 }

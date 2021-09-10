@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-wrap">
     <div class="content-container">
         <div class="content-wrapper">
             <div class="overview flex-box">
@@ -8,14 +8,18 @@
                     <img src="../../../assets/icons/plus.svg" alt="">
                 </div>
             </div>
-            <div class="overview-content m-block">
-                <div class="r-overview-content">
-                    <app-profile [users]="users"></app-profile>
-                    <app-product-content [isSmall]="true"></app-product-content>
+            <div class="overview-content m-block row">
+                <div class="r-overview-content col-md-4">
+                    <div class="pro">
+                        <app-profile [users]="users"></app-profile>
+                    </div>
+                    <div class="prod">
+                        <app-product-content [isSmall]="true"></app-product-content>
+                    </div>
                 </div>
-                <div class="l-overview-content">
-                    <div class="graphs flex-box m-block">
-                        <div class="graph card m-line-chart">
+                <div class="l-overview-content col-md-8">
+                    <div class="graphs flex-box m-block row">
+                        <div class="graph card m-line-chart col-md-6">
                             <div class="heading-label flex-box">
                                 <div class="heading">Statistics</div>
                                 <div class="month-option flex-box">
@@ -23,20 +27,21 @@
                                     <img src="../../../assets/icons/small-down.svg" alt="">
                                 </div>
                             </div>
-                            <div class="grid-box">
+                            <div class="diag grid-box">
                                 <app-diagrams [graphType]="0"></app-diagrams>
                             </div>
                         </div>
-                        <div class="graph card">
+                        <div class="graph card col-md-5">
                             <div class="heading-label flex-box">
                                 <div class="heading">Sales Distribution</div>
                             </div>
-                            <div class="grid-box">
+                            <div class="diag grid-box pie">
                                 <app-diagrams [graphType]="1"></app-diagrams>
                             </div>
                         </div>
                     </div>
-                    <app-dashboard-table [displayedColumns]="displayedColumns" [dataSource]="dataSource"></app-dashboard-table>
+                    <app-dashboard-table [displayedColumns]="displayedColumns" [dataSource]="dataSource">
+                    </app-dashboard-table>
                 </div>
             </div>
             <app-product-content [isSmall]="false"></app-product-content>

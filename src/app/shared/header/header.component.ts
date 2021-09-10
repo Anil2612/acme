@@ -1,5 +1,4 @@
-import { Component, ElementRef, OnInit, Output, EventEmitter, ViewChildren, NgZone } from '@angular/core';
-import { GeneralService } from 'src/app/common/services/general.service';
+import { Component, OnInit, Output, EventEmitter, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -34,15 +33,12 @@ export class HeaderComponent implements OnInit {
       time:'10 min ago'
     },
   ]
-  constructor(private generalService: GeneralService, private ngZone: NgZone) { }
+  constructor() { }
 
-  ngOnInit(): void {
-  
-  }
+  ngOnInit(): void {}
 
   openSidebar() {
     this.showNav = !this.showNav;
-    this.generalService.isOpen.next(this.showNav);
     this.openSidnav.emit();
   }
 

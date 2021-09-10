@@ -1,6 +1,6 @@
 <ng-container *ngIf="graphType === 0">
     <dx-chart id="chart" [dataSource]="countriesInfo" [palette]=palette>
-        <dxo-size [height]="heightValue" [width]="widthVlaue"></dxo-size>
+        <dxo-size [height]="line.heightValue" [width]="line.widthVlaue"></dxo-size>
         <dxi-series *ngFor="let energy of energySources" [valueField]="energy.value" [name]="energy.name">
         </dxi-series>
         <dxo-common-series-settings argumentField="country" type="spline">
@@ -11,8 +11,7 @@
         </dxo-argument-axis>
         <dxo-crosshair [enabled]="true" color="#949494" [width]="3" dashStyle="dot">
             <dxo-label [visible]="true" backgroundColor="#949494" position="columns">
-                <dxo-font color="#fff" [size]="12">
-                </dxo-font>
+                <dxo-font color="#fff" [size]="10" family="Source Sans Pro"></dxo-font>
             </dxo-label>
         </dxo-crosshair>
         <dxo-legend verticalAlignment="bottom" horizontalAlignment="center" itemTextPosition="bottom">
@@ -24,12 +23,12 @@
 
 <ng-container *ngIf="graphType === 1">
     <dx-pie-chart id="pie" type="doughnut" palette="Soft Blue" [dataSource]="languages" centerTemplate="centerTemplate">
-        <dxo-size [height]="heightValue" [width]="widthVlaue"></dxo-size>
+        <dxo-size [height]="pie.heightValue" [width]="pie.widthVlaue"></dxo-size>
         <dxo-legend horizontalAlignment="center" verticalAlignment="bottom"></dxo-legend>
         <dxi-series argumentField="language" valueField="percent">
             <dxo-small-values-grouping mode="topN"></dxo-small-values-grouping>
             <dxo-label [visible]="true" format="fixedPoint" position="colums">
-                <dxo-connector [visible]="true" [width]="1"></dxo-connector>
+                <dxo-font [size]="10" family="Source Sans Pro"></dxo-font>
             </dxo-label>
         </dxi-series>
         <svg *dxTemplate="let pieChart of 'centerTemplate'">

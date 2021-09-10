@@ -3,7 +3,6 @@ html, body {
     padding: 0;
     height: 100%; 
     font-family: 'Source Sans Pro', sans-serif;
-    zoom: 0.93;
 }
 
 
@@ -26,6 +25,8 @@ hr {
     border-left: none;
     margin: 0;
     border-top: 0.5px solid #F0F4F7;
+    height: 2px !important;
+    opacity: 0.1;
 }
 
 .link {
@@ -36,3 +37,15 @@ hr {
 .m-d-display {
     display: none;
 }
+
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+    flex-wrap: wrap;
+  }
+  .row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+  }

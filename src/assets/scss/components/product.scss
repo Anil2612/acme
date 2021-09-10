@@ -1,7 +1,6 @@
   .product {
     padding: em(18) em(25);
     margin-top: em(40);
-    // height: 100%;
     .heading-label {
         margin-bottom: em(30);
         .heading {
@@ -17,8 +16,8 @@
         position: relative;
         cursor: pointer;
         .play {
-            width: 24px;
-            height: 24px;
+            width: em(40);
+            height: em(40);
             position: absolute;
             background-color: white;
             border-radius: 50%;

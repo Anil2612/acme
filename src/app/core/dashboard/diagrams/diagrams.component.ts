@@ -1,8 +1,4 @@
-import { ChangeDetectorRef, Component, Input, NgZone, OnInit, ViewChild } from '@angular/core';
-import { DxPieChartComponent } from 'devextreme-angular';
-import { Subscription } from 'rxjs';
-import { Observable } from 'rxjs/internal/Observable';
-import { GeneralService } from 'src/app/common/services/general.service';
+import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-diagrams',
   templateUrl: './diagrams.component.html',
@@ -11,9 +7,17 @@ import { GeneralService } from 'src/app/common/services/general.service';
 
 export class DiagramsComponent {
   @Input() graphType = 0;
-  @ViewChild(DxPieChartComponent) pieChart!: DxPieChartComponent;
-  widthVlaue = 450;
-  heightValue = 440;
+
+  pie = {
+    widthVlaue: 350,
+    heightValue: 350
+  };
+
+  line = {
+    widthVlaue: 350,
+    heightValue: 350
+  };
+
   languages: any[] = [{
     language: "France  4260 Sales",
     percent: 35,
@@ -81,26 +85,8 @@ export class DiagramsComponent {
     coal: 85.7,
     nuclear: 37.8
   }];
-  constructor(private generalService: GeneralService) {
 
-  }
+  constructor() { }
 
-  getMarkerColor(item: any) {
-    return item.series.isVisible() ? item.marker.fill : "#888";
-  }
-  ngOnInit() {
-    this.adjustSizeBseOnsideNav();
-  }
-
-  adjustSizeBseOnsideNav() {
-    this.generalService.isOpen.subscribe((isOpen: Boolean) => {
-      if (isOpen) {
-          this.widthVlaue = 380;
-          this.heightValue = 390;
-      } else {
-          this.widthVlaue = 465;
-          this.heightValue = 440;
-      }
-    });
-  }
+  ngOnInit() { }
 }
